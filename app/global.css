@@ -33,6 +33,33 @@ html {
   min-width: 360px;
 }
 
+.typewriter {
+  /* font-size: clamp(2rem, 5vw, 3rem); */
+  font-size: 20px;
+  font-family: monospace;
+  /* color: green; */
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid white;
+  width: 0;
+  animation:
+    typing 2.5s steps(13) forwards,
+    blink 1.0s infinite;
+}
+
+@keyframes typing {
+  to {
+    width: 13ch;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
 .prose .anchor {
   @apply absolute invisible no-underline;
 
