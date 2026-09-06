@@ -1,5 +1,10 @@
 @import 'tailwindcss';
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 ::selection {
   background-color: #47a3f3;
   color: #fefefe;
@@ -15,7 +20,13 @@
   --sh-jsxliterals: #6266d1;
   --sh-property: #e25a1c;
   --sh-entity: #e25a1c;
+  --primary-font: 'GeistSans'
 }
+
+/* @font-face {
+  font-family: electric;
+  src: url(/font-size/OurFriendElectric-BWr8d.ttf);
+} */
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -29,27 +40,58 @@
   }
 }
 
-html {
-  min-width: 360px;
+body{
+   color: white;
+   background: linear-gradient(45deg,black,#5a0000);
 }
 
-.typewriter {
+.layout-root-main{
+  min-height: 100vh;
+  width: 100vw;
+ 
+}
+
+nav{
+  background: #ffffff1c;
+  top: 15px;
+  width: calc(100% - 30px);
+  left: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  position: absolute;
+  a{
+    margin: 0 10px;
+  }
+}
+.main-page{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--primary-font);
+}
+
+.page-author {
   /* font-size: clamp(2rem, 5vw, 3rem); */
-  font-size: 20px;
-  font-family: monospace;
+  font-size: 68px;
+  font-family: electric;
   /* color: green; */
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid white;
   width: 0;
   animation:
-    typing 2.5s steps(13) forwards,
+    typing 0.7s  forwards,
     blink 1.0s infinite;
+}
+.author-role{
+  text-align: center;
 }
 
 @keyframes typing {
   to {
-    width: 13ch;
+    width: 9.2ch;
   }
 }
 

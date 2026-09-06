@@ -1,4 +1,13 @@
 import { BlogPosts } from 'app/components/posts'
+import localFont from 'next/font/local'
+
+const electric = localFont({
+  src:'/font-size/ModernAgeItalic-mL6om.ttf'
+}) 
+
+const elecctricRegular = localFont({
+  src:'/font-size/ModernAge-PK6rd.ttf'
+})
 
 export default function Page() {
   return (
@@ -7,8 +16,11 @@ export default function Page() {
     //{/*     Its Ahamed.. */}
     //{/*   </h1> */}
     //{ </section> }*/
-    <main className="mainame">
-      <h1 className="typewriter">It's Ahamed..</h1>
-    </main>
+    <div className="main-page">
+      <div className='heading-container'>
+         <h1  className = {`${electric.className} page-author`}>It's Ahamed..</h1>
+         <div className={`author-role ${elecctricRegular.className}`}>Kernal Expert</div>
+      </div>   
+    </div>
     )
 }
